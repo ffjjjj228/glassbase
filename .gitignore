@@ -1,0 +1,47 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Training outputs
+AI4EMDesign/output/
+AI4EMDesign/rl_output/
+
+# Large data files (can be regenerated)
+AI4EMDesign/data/train_s4p_proc.parquet
+AI4EMDesign/data/val_s4p_proc.parquet
+AI4EMDesign/data/test_s4p_proc.parquet
+AI4EMDesign/data/dataset.parquet
+AI4EMDesign/data/dataset_flat.parquet
+AI4EMDesign/data/topology_s4p_toponly.parquet
+
+# Raw data
+AI4EMDesign/data/raw_data/
+
+# Report files
+AI4EMDesign/report/
+
+# Individual data files
+AI4EMDesign/*.s4p
+AI4EMDesign/*.topo
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# pytest
+.pytest_cache/
+AI4EMDesign/.pytest_cache/
+
+# TensorBoard logs
+events.out.tfevents.*
