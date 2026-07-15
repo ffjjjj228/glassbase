@@ -138,16 +138,6 @@ class CifarResNet(nn.Module):
         x = x.view(x.size(0), -1)
         x = self.fc(x)
 
-        n = x.size(0)
-        n_elem = 600
-        re = x[:, :n_elem].reshape(n, 60, 10)
-        im = x[:, n_elem:].reshape(n, 60, 10)
-        ma = (re ** 2 + im ** 2 + 1e-8).sqrt()
-        sc = ma.clamp_max(1.0) / ma
-        re = re * sc
-        im = im * sc
-        x = torch.cat([re.reshape(n, n_elem), im.reshape(n, n_elem)], dim=1)
-
         return x
 
 @MODEL.register
